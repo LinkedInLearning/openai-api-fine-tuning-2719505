@@ -3,28 +3,21 @@ This is the repository for the LinkedIn Learning course `OpenAI API: Fine-Tuning
 
 _See the readme file in the main branch for updated instructions and information._
 ## Instructions
-This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+This repository holds example data and two Jupyter Notebooks:
+- `create-training-data/create-training-data.ipynb` demonstrates how to prepare data for fine-tuning
+- `fine-tune-flow.ipynb` demonstrates how to perform fine-tuning through the OpenAI API.
 
-## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `main` branch holds the final state of the code when in the course.
+The first time you run a block in a Jupyter Notebook, the environment will ask you to pick an environment. Follow the instructions and pick the first available Python environment. 
 
-When switching from one exercise files branch to the next after making changes to the files, you may get a message like this:
-
-    error: Your local changes to the following files would be overwritten by checkout:        [files]
-    Please commit your changes or stash them before you switch branches.
-    Aborting
-
-To resolve this issue:
-	
-    Add changes to git using this command: git add .
-	Commit changes using this command: git commit -m "some message"
+NOTE: The first code block will take a while to load because the environment has to load first.
 
 ## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+It is recommended you run these exercise files in GitHub Codespaces. This gives you a pre-configured Python environment for the Jupyter Notebooks to run.
+To use the exercise files, follow these steps:
+1. In the root folder, rename the file `env-template` to `.env`.
+2. Go to [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys).
+3. Generate a new key and copy the key to your clipboard.
+4. In `.env` add the key without quotes or parentheses.
 
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
