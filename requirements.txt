@@ -1,0 +1,5 @@
+numpy==1.26.4
+openai==1.17.0
+pandas==2.2.2
+python-dotenv==1.0.1
+tiktoken==0.6.0

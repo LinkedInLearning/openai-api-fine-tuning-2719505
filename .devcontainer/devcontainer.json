@@ -6,8 +6,7 @@
     "dockerfile": "Dockerfile"
   },
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
-  "postCreateCommand": "",
-  "postAttachCommand": "pip install openai python-dotenv pandas json pprint tiktoken numpy collections",
+  "postCreateCommand": "pip install --user -r requirements.txt",
   "customizations": {
     "vscode": {
       "extensions": [
