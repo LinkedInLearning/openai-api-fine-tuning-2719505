@@ -1,15 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-  "name": "Python & Node.js",
+  "name": "Python",
   "build": {
     "dockerfile": "Dockerfile"
   },
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
   "postCreateCommand": "pip install openai python-dotenv pandas json pprint tiktoken numpy collections",
-  "forwardPorts": [
-    3000
-  ],
   "postAttachCommand": "git pull --all",
   "customizations": {
     "vscode": {
