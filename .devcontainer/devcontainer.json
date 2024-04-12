@@ -1,14 +1,29 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-  "extensions": [
-    "GitHub.github-vscode-theme",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "ritwickdey.LiveServer",
-    "stylelint.vscode-stylelint"
-    // Additional Extensions Here
+  "name": "Python & Node.js",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
+  "postCreateCommand": "pip install openai python-dotenv pandas json pprint tiktoken numpy collections",
+  "forwardPorts": [
+    3000
   ],
-  "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
-  "postAttachCommand": "git pull --all"  
+  "postAttachCommand": "git pull --all",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "GitHub.github-vscode-theme",
+        "ms-azuretools.vscode-docker",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy"
+      ]
+    }
+  }
 }
-
-// DevContainer Reference: https://code.visualstudio.com/docs/remote/devcontainerjson-reference
